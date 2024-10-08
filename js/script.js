@@ -52,27 +52,21 @@ const mostrarDetallesPelicula = (pelicula) => {
         </div>
         <p>${pelicula.overview}</p>
         <p>Géneros:${nombresGeneros}</p>
-        <button id="toggleDetalles" class="detailsButton"></button>
+        <button id="toggleDetalles" class="detailsButton">Más información</button>
         <section id="informacionAdicional" class="additionalInfo" style="display: none;">
             <div class="infoContainer">
-                <h3 class="addInfoHeading">Año de lanzamiento:</h3>
-                <p class="addInfoData">${pelicula.release_date.split('-')[0]}</p>
-                <h3 class="addInfoHeading">Duración:</h3>
-                <p class="addInfoData">${pelicula.runtime} minutos</p>
-                <h3 class="addInfoHeading">Presupuesto:</h3>
-                <p class="addInfoData">${pelicula.budget.toLocaleString()}</p>
-                <h3 class="addInfoHeading">Ganancias:</h3>
-                <p class="addInfoData">${pelicula.revenue.toLocaleString()}</p>
+                <p class="addInfoData">Año de lanzamiento:${pelicula.release_date.split('-')[0]}</p>
+                <p class="addInfoData"> Duración:${pelicula.runtime}</p>
+                <p class="addInfoData">Presupuesto:${pelicula.budget.toLocaleString()}</p>
+                <p class="addInfoData">Ganancias:${pelicula.revenue.toLocaleString()}</p>
             </div>
         </section>
     `;
 
-    actualizarMenuDesplegable(pelicula);
-
     document.getElementById('toggleDetalles').addEventListener('click', () => {
         const informacionAdicional = document.getElementById('informacionAdicional');
         informacionAdicional.style.display = informacionAdicional.style.display === 'none' ? 'block' : 'none';
-        document.getElementById('toggleDetalles').innerHTML = informacionAdicional.style.display === 'none' ? 'more' : '✖';
+        document.getElementById('toggleDetalles').innerHTML = informacionAdicional.style.display === 'none' ? 'Más información' : '✖';
     });
 
     document.getElementById('cerrarDetalles').addEventListener('click', () => {
@@ -81,15 +75,6 @@ const mostrarDetallesPelicula = (pelicula) => {
     });
 
     contenedorDetalles.style.display = 'block';
-};
-
-const actualizarMenuDesplegable = (pelicula) => {
-    if (pelicula) {
-        document.getElementById('dropdownYear').innerHTML = `Year: ${pelicula.release_date.split('-')[0]}`;
-        document.getElementById('dropdownRuntime').innerHTML = `Runtime: ${pelicula.runtime} minutes`;
-        document.getElementById('dropdownBudget').innerHTML = `Budget: ${pelicula.budget.toLocaleString()} USD`;
-        document.getElementById('dropdownRevenue').innerHTML = `Revenue: ${pelicula.revenue.toLocaleString()} USD`;
-    }
 };
 
 const inicializarBusqueda = (peliculas) => {
