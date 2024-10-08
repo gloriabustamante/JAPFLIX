@@ -7,9 +7,8 @@
   <title>Japflix</title>
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
   <link rel="stylesheet" href="css/style.css">
-  
 </head>
 
 <body class="bg-dark">
@@ -23,13 +22,26 @@
         </div>
       </div>
     </div>
-
+    <section>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end" id="dropdownMovieInfo">
+          <li><a class="dropdown-item" href="#" id="dropdownYear">Year: </a></li>
+          <li><a class="dropdown-item" href="#" id="dropdownRuntime">Runtime: </a></li>
+          <li><a class="dropdown-item" href="#" id="dropdownBudget">Budget: </a></li>
+          <li><a class="dropdown-item" href="#" id="dropdownRevenue">Revenue: </a></li>
+        </ul>
+      </div>
+    </section>
     <div class="album">
       <ul class="list-group container" id="lista">
       </ul>
     </div>
-  </main>
 
+    <div id="filmDetails" style="display: none;"></div>
+  </main>
   <footer class="text-muted py-3">
     <div class="container">
       <p class="float-end mb-1">
@@ -42,7 +54,7 @@
   </footer>
 
   <script src="js/bootstrap.bundle.min.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>

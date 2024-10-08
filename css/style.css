@@ -26,3 +26,91 @@ main {
 .offcanvas-top{
     height: fit-content;
 }
+
+
+#filmDetails {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.detailsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detailsButton {
+    background-color: transparent; 
+    color: #ffffff; 
+    border: none; 
+    font-size: 1.5em; 
+    cursor: pointer; 
+}
+
+.addInfoHeading {
+    display: none;
+}
+
+.additionalInfo {
+    margin-top: 15px; 
+    background-color: #343a40; 
+    padding: 15px;
+    border-radius: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: bol;
+}
+
+p {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+
+p.estrellas {
+    font-size: 20px;
+    color: orange;
+    text-align: end;
+    font-style: normal;
+}
+
+.article {
+    border: 1px solid #c93030d2;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+#filmDetails {
+    background: rgba(206, 49, 49, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.dropdown {
+    display: inline-block;
+    float: right;
+}
+
+.album {
+    padding-left: 60px;
+    padding-right: 60px;
+}
