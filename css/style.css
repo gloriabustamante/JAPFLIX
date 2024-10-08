@@ -1,39 +1,5 @@
-.img-card-fit {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-}
-
-.img-cont {
-    height: 200px;
-    overflow: hidden;
-    background-color: beige;
-}
-
-.card-content{
-    height: 150px;
-    overflow: auto;
-}
-
 main {
     min-height: calc(100vh - 100px);
-  }
-
-.checked{
-    color: orange;
-}
-
-.offcanvas-top{
-    height: fit-content;
-}
-
-
-#filmDetails {
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .detailsHeader {
@@ -45,18 +11,17 @@ main {
 .detailsButton {
     background-color: transparent; 
     color: #ffffff; 
-    border: none; 
-    font-size: 1.5em; 
+    font-size: 1em; 
     cursor: pointer; 
+    margin-top: 10px;
+    padding-left: 2px;
+    display: flex;
 }
 
-.addInfoHeading {
-    display: none;
-}
 
 .additionalInfo {
     margin-top: 15px; 
-    background-color: #343a40; 
+    background-color: #f53b3bd2; 
     padding: 15px;
     border-radius: 8px;
 }
@@ -103,11 +68,6 @@ p.estrellas {
     top: 10%;
     left: 50%;
     transform: translate(-50%, 0);
-}
-
-.dropdown {
-    display: inline-block;
-    float: right;
 }
 
 .album {
